@@ -12,6 +12,10 @@ export class UsersService {
         return await this.usersRepository.find();
     }
 
+    async createUser(user: User) {
+        return await this.usersRepository.save(user);
+    }
+
     async getUser(_id: number): Promise<User[]> {
         return await this.usersRepository.find({
             select: ["fullName", "birthday", "isActive"],
