@@ -1,2 +1,0 @@
-# SoftwareProject
-Nestjs and Angular
