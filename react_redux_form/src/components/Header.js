@@ -10,11 +10,17 @@ const Header = (props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+              <Link to="/" className="nav-link">Projects</Link>
+            </li>
             <li className="nav-item active">
-              <Link to="/" className="nav-link">Home</Link>
+              <Link to="/notes" className="nav-link">Notes</Link>
             </li>
             <li className="nav-item">
               <Link to="/note/new" className="nav-link">Create new note</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/project/new" className="nav-link">Create new project</Link>
             </li>
           </ul>
         </div>

@@ -1,5 +1,9 @@
 export const CREATE_NOTE = 'CREATE_NOTE';
+export const CREATE_PROJECT = 'CREATE_PROJECT';
 export const DELETE_NOTE = 'DELETE_NOTE';
+export const DELETE_PROJECT = 'DELETE_PROJECT';
 export const EDIT_NOTE = 'EDIT_NOTE';
 export const FETCH_NOTES = 'FETCH_NOTES';
 export const FETCH_NOTE = 'FETCH_NOTE';
+export const FETCH_PROJECTS = 'FETCH_PROJECTS';
+export const FETCH_PROJECT = 'FETCH_PROJECT';

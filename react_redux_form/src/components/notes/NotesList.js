@@ -12,18 +12,17 @@ class NotesList extends React.Component {
             <p className="text-center">
                 No notes Found. <br/>
                 Create new Note by clicking &nbsp;
-                <Link to='/notes/create'>here</Link>
+                <Link to='/note/new'>here</Link>
             </p>
         );
     }
-    renderList() {
-        return this.props.notes.map(note => {
+    renderNotesList() {
+        return this.props.notes.map((note, i) => {
             return (
-                <Link to={`/note/${note.id}`} key={note.id} className="list-group-item list-group-item-action flex-column align-items-start">
+                <Link to={`/note/${note.id}`} key={i} className="list-group-item list-group-item-action flex-column align-items-start" id="2">
                     <div className="d-flex w-100 justify-content-between">
                         <h5 className="mb-1">{note.title}</h5>
                     </div>
-                    <p className="mb-1">{note.description}</p>
                 </Link>
             );
         })
@@ -32,11 +31,11 @@ class NotesList extends React.Component {
     render() {
         const containsData = this.props.notes.length > 0
         return (
-            <div className="jumbotron">
+            <div id="noteId" className="jumbotron">
                 <h1>Notes</h1>
 		        <br/>
-                <div className="list-group">
-                    {containsData ? this.renderList() : this.renderEmptyListMessage()}
+                <div className="list-group-1">
+                    {containsData ? this.renderNotesList() : this.renderEmptyListMessage()}
                 </div>
             </div>
         )
